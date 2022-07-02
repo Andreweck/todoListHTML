@@ -17,8 +17,6 @@ function addTask(db){
   const mainMenu = require('./mainMenu.js');
   db.getAll().then(keys => {
   let int;
-  let taskName = input.question("What is the title of this task?");
-  let taskDescription = input.question("Please give a description of this task:");
   let taskList = new Task(Object.keys(keys).length + 1, taskName, taskDescription, Date("Central"), false, null);
     db.set(taskList.id, [taskList.name, taskList.description, taskList.timeAdded, taskList.isComplete, taskList.timeCompleted]);
     mainMenu(db);
