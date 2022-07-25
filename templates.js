@@ -1,5 +1,0 @@
-function template(title) {
-
-  
-  
-}
